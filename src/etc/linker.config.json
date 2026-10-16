@@ -1,0 +1,15 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libvpx-x86_64-v2.so.so",
+		    "libdummy_binary_libvpx.so.so",
+		    "libdummy_libvpx-x86_64-v2.so",
+		    "libdummy_libvpx.so"
+	],
+	"requireLibs": [	
+		    "libc++_shared.so",
+		    "libc.so",
+		    "libdl.so",
+		    "libm.so"
+	],
+	"visible": true
+}

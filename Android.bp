@@ -1,0 +1,70 @@
+package {
+    default_applicable_licenses: ["external_libvpx_license"],
+}
+
+license {
+    name: "external_libvpx_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-ISC",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+prebuilt_apex {
+    name: "org.blisslabs.ag.libvpx",
+    apex_name: "org.blisslabs.ag.libvpx",
+    source_apex_name: "org.blisslabs.ag.libvpx",
+    arch: {
+        x86_64: {
+            src: "org.blisslabs.ag.libvpx.apex",
+        },
+    },
+    filename: "org.blisslabs.ag.libvpx.apex",
+    prefer: true,
+    installable: true,
+}
+
+cc_prebuilt_library {
+    name: "libvpx",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:any",
+        "com.android.media.swcodec",
+    ],
+    export_include_dirs: [
+        "dev-src/include",
+        "dev-src/include/vpx",
+    ],
+    shared: {
+        srcs: ["src/lib/libvpx.so"],
+    },
+    static: {
+        srcs: ["dev-src/lib/libvpx.a"],
+    },
+}
+
+cc_library_headers {
+    name: "libvpx_headers",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:any",
+        "com.android.media.swcodec",
+    ],
+    export_include_dirs: [
+        "dev-src/include",
+        "dev-src/include/vpx",
+    ],
+}
