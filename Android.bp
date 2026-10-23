@@ -37,7 +37,7 @@ cc_prebuilt_library {
     host_supported: true,
     apex_available: [
         "//apex_available:platform",
-        "//apex_available:any",
+        "//apex_available:anyapex",
         "com.android.media.swcodec",
     ],
     export_include_dirs: [
@@ -60,7 +60,7 @@ cc_library_headers {
     host_supported: true,
     apex_available: [
         "//apex_available:platform",
-        "//apex_available:any",
+        "//apex_available:anyapex",
         "com.android.media.swcodec",
     ],
     export_include_dirs: [
