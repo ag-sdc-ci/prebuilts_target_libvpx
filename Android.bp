@@ -41,14 +41,14 @@ cc_prebuilt_library {
         "com.android.media.swcodec",
     ],
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/vpx",
+        "include",
+        "include/vpx",
     ],
     shared: {
-        srcs: ["src/lib/libvpx.so"],
+        srcs: ["lib64/libvpx.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libvpx.a"],
+        srcs: ["lib64/libvpx.a"],
     },
 }
 
@@ -64,7 +64,7 @@ cc_library_headers {
         "com.android.media.swcodec",
     ],
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/vpx",
+        "include",
+        "include/vpx",
     ],
 }
